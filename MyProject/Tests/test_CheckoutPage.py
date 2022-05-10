@@ -1,0 +1,24 @@
+from Tests.BaseTest import BaseTest
+from Tests.test_LoginPage import TestLogin
+import os
+import pytest
+
+
+class TestCheckoutPage(BaseTest):
+
+    @pytest.mark.sanity
+    def test_login(self):
+        TestLogin.test_login(self)
+        TestLogin.test_verify_url(self)
+
+    def test_add_item(self):
+        self.inventoryPage.select_item()
+        self.inventoryPage.click_on_cart()
+
+    def test_place_order(self):
+        self.cartPage.checkout()
+        self.checkoutPage.checkout_details(os.getenv("firstname"), os.getenv("lastname"), os.getenv("zipcode"))
+        self.checkoutPage.click_on_continue()
+        self.checkoutPage.click_on_finish()
+        success_msg = self.checkoutPage.get_success_msg()
+        assert success_msg == "THANK YOU FOR YOUR ORDER"
