@@ -1,0 +1,41 @@
+2022-05-11 20:34:29,713 : INFO : test_login Loggin in 
+2022-05-11 20:34:29,719 : INFO : test_login Reading url from env file 
+2022-05-11 20:34:29,719 : INFO : test_login Reading url from env file 
+2022-05-11 20:34:29,726 : INFO : enter_url Entering url 
+2022-05-11 20:34:30,048 : INFO : enter_url maximizing window 
+2022-05-11 20:34:30,176 : INFO : test_login Reading username from env file 
+2022-05-11 20:34:30,176 : INFO : test_login Reading username from env file 
+2022-05-11 20:34:30,184 : INFO : enter_username Entering username 
+2022-05-11 20:34:30,252 : INFO : test_login Reading password from env file 
+2022-05-11 20:34:30,252 : INFO : test_login Reading password from env file 
+2022-05-11 20:34:30,263 : INFO : enter_password Entering Password 
+2022-05-11 20:34:30,333 : INFO : click_login Clicking on login button 
+2022-05-11 20:34:30,415 : INFO : test_login Login successful 
+2022-05-11 20:34:30,415 : INFO : test_login Login successful 
+2022-05-11 20:34:30,433 : INFO : get_page_url getting page url value 
+2022-05-11 20:34:30,440 : INFO : test_verify_url asserting the url value 
+2022-05-11 20:34:30,441 : INFO : test_verify_url Verified the page url after login 
+2022-05-11 20:34:30,453 : INFO : test_add_item Seleting least price item 
+2022-05-11 20:34:30,464 : INFO : select_item Selecting the filter low to high 
+2022-05-11 20:34:30,525 : INFO : select_item Selecting the least priced item 
+2022-05-11 20:34:30,702 : INFO : select_item Saving the item name 
+2022-05-11 20:34:30,726 : INFO : click_on_cart Clicking on shopping cart button 
+2022-05-11 20:34:30,793 : INFO : test_cart_page Verifying the selected item in the cart 
+2022-05-11 20:34:30,802 : INFO : verify_item Getting the item name 
+2022-05-11 20:34:30,819 : INFO : test_cart_page Removing the item 
+2022-05-11 20:34:30,827 : INFO : remove_item Clicking on remove button 
+2022-05-11 20:34:30,866 : INFO : remove_item Clicked on button 
+2022-05-11 20:34:30,879 : INFO : click_on_continue Clicking on continue button 
+2022-05-11 20:34:30,959 : INFO : click_on_continue Clicked on continue button 
+2022-05-11 20:34:30,960 : INFO : test_cart_page Selecting least price item 
+2022-05-11 20:34:30,970 : INFO : select_item Selecting the filter low to high 
+2022-05-11 20:34:30,970 : INFO : select_item Selecting the filter low to high 
+2022-05-11 20:34:31,058 : INFO : select_item Selecting the least priced item 
+2022-05-11 20:34:31,058 : INFO : select_item Selecting the least priced item 
+2022-05-11 20:34:31,094 : INFO : select_item Saving the item name 
+2022-05-11 20:34:31,094 : INFO : select_item Saving the item name 
+2022-05-11 20:34:31,114 : INFO : click_on_cart Clicking on shopping cart button 
+2022-05-11 20:34:31,114 : INFO : click_on_cart Clicking on shopping cart button 
+2022-05-11 20:34:31,145 : INFO : test_cart_page Checking out 
+2022-05-11 20:34:31,153 : INFO : checkout Clicking on checkout button 
+2022-05-11 20:34:31,185 : INFO : checkout Clicked on checkout button 

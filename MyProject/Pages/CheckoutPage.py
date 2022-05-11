@@ -17,16 +17,26 @@ class CheckoutPage(BasePage):
         self.message_heading = Locators.message_heading
 
     def checkout_details(self, firstname, lastname, zipcode):
-        self.driver.find_element(by=By.XPATH,value=self.firstname_path).send_keys(firstname)
-        self.driver.find_element(by=By.XPATH,value=self.lastname_path).send_keys(lastname)
-        self.driver.find_element(by=By.XPATH,value=self.postal_code).send_keys(zipcode)
+        log = self.get_logger()
+        log.info("Entering firstname")
+        self.driver.find_element(by=By.XPATH, value=self.firstname_path).send_keys(firstname)
+        log.info("Entering lastname")
+        self.driver.find_element(by=By.XPATH, value=self.lastname_path).send_keys(lastname)
+        log.info("Entering Zipcode")
+        self.driver.find_element(by=By.XPATH, value=self.postal_code).send_keys(zipcode)
 
     def click_on_continue(self):
+        log = self.get_logger()
+        log.info("Clicking on continue button")
         self.click_element(self.continue_btn)
 
     def click_on_finish(self):
+        log = self.get_logger()
+        log.info("Clicking on finish button")
         self.click_element(self.finish_btn)
 
     def get_success_msg(self):
+        log = self.get_logger()
+        log.info("Reading success message")
         return self.get_text(self.message_heading)
 
