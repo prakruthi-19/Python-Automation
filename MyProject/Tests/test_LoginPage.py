@@ -9,6 +9,10 @@ load_dotenv()
 @pytest.mark.regression
 class TestLogin(BaseTest):
     def test_login(self):
+        """
+        This function logs into the application
+        The input data is read from env file
+        """
         log = BasePage.get_logger(self)
         log.info("Reading url from env file")
         self.loginPage.enter_url(os.getenv("url"))
@@ -20,6 +24,7 @@ class TestLogin(BaseTest):
         log.info("Login successful")
 
     def test_verify_url(self):
+        """This function is to verify the url after login"""
         log = BasePage.get_logger(self)
         current_url = self.loginPage.get_page_url()
         log.info("asserting the url value")

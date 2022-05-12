@@ -10,12 +10,16 @@ from Pages.BasePage import BasePage
 class TestInventory(BaseTest):
 
     def test_login(self):
+        """
+        This function logs into the application
+        """
         log = BasePage.get_logger(self)
         log.info("Logging in")
         TestLogin.test_login(self)
         TestLogin.test_verify_url(self)
 
     def test_verify_title(self):
+        """This function verifies the inventory page title"""
         log = BasePage.get_logger(self)
         log.info("Verifying the page title")
         title = self.inventoryPage.get_title(Locators.inventory_page_title)
@@ -23,6 +27,7 @@ class TestInventory(BaseTest):
         log.info("Verified the page title")
 
     def test_select_least_item(self):
+        """This function selects least priced item"""
         log = BasePage.get_logger(self)
         log.info("Selecting the least valued item...")
         self.inventoryPage.select_item()

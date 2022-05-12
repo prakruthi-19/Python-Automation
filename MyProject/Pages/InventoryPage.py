@@ -18,6 +18,9 @@ class InventoryPage(BasePage):
         self.shopping_cart_link = Locators.shopping_cart_link
 
     def select_item(self):
+        """
+        This function selects least priced item
+        """
         log = self.get_logger()
         log.info("Selecting the filter low to high")
         self.click_element(self.filter_low_high)
@@ -29,11 +32,19 @@ class InventoryPage(BasePage):
         InventoryPage.item_name = item_name_list[0].text
 
     def click_on_cart(self):
+        """
+        This function clicks on cart button
+        """
         log = self.get_logger()
         log.info("Clicking on shopping cart button")
         self.click_element(self.shopping_cart_link)
 
     def get_title(self, by_locator):
+        """
+        This function returns the page title
+        :param by_locator: page title xpath location
+        :return: returns the title value
+        """
         log = self.get_logger()
         log.info("Getting page title")
         return self.get_text(by_locator)

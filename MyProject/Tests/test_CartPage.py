@@ -8,18 +8,21 @@ from Tests.test_LoginPage import TestLogin
 class TestCartPage(BaseTest):
 
     def test_login(self):
+        """This function logs into the application"""
         log = BasePage.get_logger(self)
         log.info("Logging in")
         TestLogin.test_login(self)
         TestLogin.test_verify_url(self)
 
     def test_add_item(self):
+        """This function selects least priced item"""
         log = BasePage.get_logger(self)
         log.info("Selecting least price item")
         self.inventoryPage.select_item()
         self.inventoryPage.click_on_cart()
 
     def test_cart_page(self):
+        """This function verifies cart page functionalities"""
         log = BasePage.get_logger(self)
         log.info("Verifying the selected item in the cart")
         value = self.cartPage.verify_item()
